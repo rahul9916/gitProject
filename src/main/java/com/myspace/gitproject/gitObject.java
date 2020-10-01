@@ -8,8 +8,11 @@ public class gitObject implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "name")
+	@org.kie.api.definition.type.Label("name")
 	private java.lang.String name;
+
+	@org.kie.api.definition.type.Label(value = "id")
+	private java.lang.String id;
 
 	public gitObject() {
 	}
@@ -22,8 +25,17 @@ public class gitObject implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public gitObject(java.lang.String name) {
+	public java.lang.String getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
+	public gitObject(java.lang.String name, java.lang.String id) {
 		this.name = name;
+		this.id = id;
 	}
 
 }
