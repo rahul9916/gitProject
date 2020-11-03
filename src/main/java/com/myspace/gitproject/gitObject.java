@@ -11,8 +11,11 @@ public class gitObject implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("name")
 	private java.lang.String name;
 
-	@org.kie.api.definition.type.Label(value = "id")
+	@org.kie.api.definition.type.Label("id")
 	private java.lang.String id;
+
+	@org.kie.api.definition.type.Label(value = "age")
+	private java.lang.Integer age;
 
 	public gitObject() {
 	}
@@ -33,9 +36,19 @@ public class gitObject implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public gitObject(java.lang.String name, java.lang.String id) {
+	public java.lang.Integer getAge() {
+		return this.age;
+	}
+
+	public void setAge(java.lang.Integer age) {
+		this.age = age;
+	}
+
+	public gitObject(java.lang.String name, java.lang.String id,
+			java.lang.Integer age) {
 		this.name = name;
 		this.id = id;
+		this.age = age;
 	}
 
 }
